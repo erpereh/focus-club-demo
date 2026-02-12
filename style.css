@@ -55,6 +55,12 @@
   --nav-height: 80px;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 /* --- Reset --- */
 *,
 *::before,
@@ -375,7 +381,7 @@ p {
    ============================================ */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   padding-top: var(--nav-height);
@@ -1461,6 +1467,16 @@ p {
 @media (max-width: 768px) {
   :root {
     --nav-height: 64px;
+    --space-3xl: 60px;
+    --space-2xl: 48px;
+    --space-xl: 32px;
+    --space-lg: 24px;
+    --space-md: 16px;
+  }
+
+  .container {
+    padding: 0 20px;
+    max-width: 100%;
   }
 
   .nav-links {
@@ -1498,7 +1514,7 @@ p {
   }
 
   .hero h1 {
-    font-size: clamp(2.5rem, 10vw, 4rem);
+    font-size: clamp(2rem, 9vw, 3.2rem);
   }
 
   .hero-subtitle {
@@ -1544,6 +1560,17 @@ p {
     grid-template-columns: 1fr;
   }
 
+  /* Compact comparison table for mobile */
+  .comparativa-header div {
+    font-size: 1rem;
+    padding: 10px 4px;
+  }
+
+  .comparativa-row div {
+    font-size: 0.8rem;
+    padding: 10px 8px;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
@@ -1570,6 +1597,15 @@ p {
 
 /* Small mobile */
 @media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.85rem;
+  }
+
   .hero-stats {
     flex-direction: column;
     align-items: center;
