@@ -23,10 +23,10 @@
   <meta property="og:locale" content="es_ES" />
 
   <!-- Favicon placeholder -->
-  <link rel="icon" type="image/jpeg" href="/img/logo.jpg" />
+  <link rel="icon" type="image/jpeg" href="./img/logo.jpg" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="./style.css" />
 
   <!-- Structured Data: LocalBusiness -->
   <script type="application/ld+json">
@@ -79,7 +79,7 @@
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="#hero" class="nav-logo">
-        <img src="/img/logo.jpg" alt="Focus Club Vallecas" class="nav-logo-img" />
+        <img src="./img/logo.jpg" alt="Focus Club Vallecas" class="nav-logo-img" />
         FOCUS <span class="logo-accent">CLUB</span>
       </a>
       <ul class="nav-links" id="navLinks">
@@ -303,6 +303,60 @@
             <li><span class="check">✓</span> Educación alimentaria</li>
             <li><span class="check">✓</span> Revisión semanal</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PLANES / CATALOGO ========== -->
+  <section class="section planes-bg" id="planes">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Catálogo</span>
+        <h2>FOCUS CLUB <br><span class="text-green" style="font-size: 0.6em; display:block; margin-top:10px;">By SANDRA
+            ANDUJAR COACH</span></h2>
+        <p style="max-width: 800px;">
+          Entrenamientos Totalmente Personalizados según tu nivel, situación y objetivos con máquinas especializadas con
+          un entrenador@ exclusivamente para ti. Seguimiento nutricional adaptado a tus objetivos (pérdida de grasa,
+          ganancia de masa muscular, etc).
+        </p>
+      </div>
+
+      <div class="planes-grid">
+        <!-- Plan 1 -->
+        <div class="plan-card reveal-left">
+          <div class="plan-image"
+            style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800');"></div>
+          <div class="plan-content">
+            <h3 class="plan-title">Entrenamiento personal</h3>
+            <p class="plan-subtitle">Entrenamiento con entrenador 1 hora sin bono</p>
+            <div class="plan-price-row">
+              <span class="price-current">50,00 €</span>
+              <span class="price-original">55,00 €</span>
+            </div>
+            <button class="btn btn-plan add-plan-btn" data-plan="Entrenamiento Personal" data-price="50">
+              Añadir al panel <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Plan 2 -->
+        <div class="plan-card reveal-right popular">
+          <div class="plan-image"
+            style="background-image: url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800');">
+            <div class="popular-badge">Más Popular</div>
+          </div>
+          <div class="plan-content">
+            <h3 class="plan-title">Bono entrenamientos personales</h3>
+            <p class="plan-subtitle">Bono mensual 1 hora semanal o 2 sesiones de 30’</p>
+            <div class="plan-price-row">
+              <span class="price-current">180,00 €</span>
+              <span class="price-original">200,00 €</span>
+            </div>
+            <button class="btn btn-plan add-plan-btn" data-plan="Bono Entrenamientos" data-price="180">
+              Añadir al panel <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -625,7 +679,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="/img/logo.jpg" alt="Focus Club Vallecas" class="footer-logo-img" />
+            <img src="./img/logo.jpg" alt="Focus Club Vallecas" class="footer-logo-img" />
           </div>
           <p>Centro de entrenamiento personal exclusivo 1:1 en Vallecas. Entrena con foco. Evoluciona de verdad.</p>
           <div class="footer-social">
@@ -688,8 +742,48 @@
     </svg>
   </a>
 
+  <!-- ========== USER PANEL OVERLAY ========== -->
+  <div class="user-panel-overlay" id="userPanelOverlay">
+    <div class="user-panel">
+      <div class="user-panel-header">
+        <h3>Área de Cliente</h3>
+        <button class="close-panel" id="closePanel">×</button>
+      </div>
+      <div class="user-panel-content">
+        <div class="user-profile-summary">
+          <div class="user-avatar">JP</div>
+          <div class="user-details">
+            <h4>Juan Pérez</h4>
+            <p>Miembro desde 2026</p>
+          </div>
+        </div>
+
+        <div class="user-section">
+          <h4>Mis Planes Activos</h4>
+          <div class="active-plans-list" id="activePlansList">
+            <!-- Plans will be injected here via JS -->
+            <div class="empty-state">No tienes planes activos.</div>
+          </div>
+        </div>
+
+        <div class="user-section">
+          <h4>Tiempo Restante</h4>
+          <div class="time-remaining-card">
+            <div class="time-icon">⏳</div>
+            <div class="time-info">
+              <span class="time-value">0</span>
+              <span class="time-label">Sesiones disponibles</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-secondary btn-full logout-btn">Cerrar Sesión</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 
 </html>
