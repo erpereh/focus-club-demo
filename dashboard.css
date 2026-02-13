@@ -754,6 +754,10 @@ body {
         gap: 20px;
     }
 
+    #planes .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
     .stat-value {
         font-size: 2.5rem !important;
     }
@@ -761,4 +765,12 @@ body {
     .btn-primary {
         padding: 12px 20px;
     }
+}
+
+/* Confirm booking button */
+.btn-primary {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
