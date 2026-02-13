@@ -1623,3 +1623,22 @@ p {
     --max-width: 1320px;
   }
 }
+
+/* Login Button in Nav */
+.nav-login-btn {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 20px;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.nav-login-btn:hover {
+  background: var(--white);
+  color: var(--black) !important;
+  border-color: var(--white);
+}
+
+.nav-login-btn:hover::after {
+  width: 0 !important;
+}
